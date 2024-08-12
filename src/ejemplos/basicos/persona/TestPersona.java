@@ -1,7 +1,6 @@
 package ejemplos.basicos.persona;
 
 import java.time.LocalDate;
-import java.util.Arrays;
 
 public class TestPersona {
     public static void main(String[] args) {
