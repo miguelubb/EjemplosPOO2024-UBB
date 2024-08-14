@@ -69,4 +69,12 @@ public class Persona {
         Period p=Period.between(fechaNacimiento, LocalDate.now());
         return p.getYears();
     }
+
+    @Override
+    public String toString() {
+        return "Persona{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                '}';
+    }
 }
