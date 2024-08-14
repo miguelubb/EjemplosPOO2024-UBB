@@ -3,6 +3,7 @@ package ejemplos.basicos.Enumeracion;
 import java.util.Scanner;
 
 public class DemoEstudiante {
+
     public static void main(String[] args) {
         /*
         La clase DemoEstudiante debe:
