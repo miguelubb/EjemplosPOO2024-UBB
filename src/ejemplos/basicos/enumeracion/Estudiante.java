@@ -1,4 +1,4 @@
-package ejemplos.basicos.Enumeracion;
+package ejemplos.basicos.enumeracion;
 
 import java.util.Objects;
 

@@ -1,4 +1,4 @@
-package ejemplos.basicos.Enumeracion;
+package ejemplos.basicos.enumeracion;
 
 public enum EstadoEstudiante {
     NO_VIGENTE,
