@@ -31,7 +31,7 @@ public class Deuda {
         //actualizar el cliente
         this.cliente = cliente;
         //actualizar la lista de deudas del cliente nuevo
-        cliente.addDeuda(this);
+        this.cliente.addDeuda(this);
     }
 
     public String getMotivo() {
