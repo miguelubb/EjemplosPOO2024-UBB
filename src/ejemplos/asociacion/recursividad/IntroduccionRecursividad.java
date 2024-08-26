@@ -37,15 +37,15 @@ public class IntroduccionRecursividad {
         }
     }
 
+    //pre: n>=0
     public static int fib(int n) {
-        if (n == 0){
-            return 0;
-        }else if (n == 1){
-            return 1;
+        if (n <= 1){
+            return n;
         }else{
             return fib(n-1) + fib(n-2);
         }
     }
+
     //pre: divisor es distinto de 0
     public static int division(int dividendo, int divisor){
         if(dividendo < divisor){

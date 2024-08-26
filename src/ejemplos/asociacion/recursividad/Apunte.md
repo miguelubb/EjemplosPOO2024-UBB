@@ -9,9 +9,14 @@ Esta técnica es especialmente útil cuando un problema puede dividirse en subpr
 
 Un algoritmo recursivo generalmente tiene dos componentes clave:
 
-1. **Caso Base:** Es la condición de término de la recursión. Es el punto en el cual el problema es tan simple que puede resolverse directamente sin necesidad de más llamadas recursivas. Este caso evita que la recursión continúe indefinidamente, lo que llevaría a un desbordamiento de la pila de llamadas (_stack overflow_).
+1. **Caso Base:** 
+   * Es la condición de término de la recursión. 
+   * **Es el punto en el cual el problema es tan simple que puede resolverse directamente sin necesidad de más llamadas recursivas***. 
+   * Este caso evita que la recursión continúe indefinidamente, lo que llevaría a un desbordamiento de la pila de llamadas (_stack overflow_).
 
-2. **Caso General:** Es la parte del algoritmo que divide el problema en uno o más subproblemas más pequeños, y luego se llama recursivamente a sí mismo para resolver esos subproblemas. Es crucial que cada llamada recursiva se acerque al caso base para que eventualmente la recursión termine.
+2. **Caso General:** 
+   * Es la parte del algoritmo que divide el problema en uno o más subproblemas más pequeños, y luego se llama recursivamente a sí mismo para resolver esos subproblemas. 
+   * Es crucial que cada llamada recursiva se acerque al caso base para que eventualmente la recursión termine.
 
 ## Ejemplo de Recursividad
 
@@ -39,20 +44,13 @@ int factorial(int n) {
     }
 }
 ```
-### Importancia de Acercarse al Caso Base
+### Importante: ¡hay de Acercarse al Caso Base en cada llamada recursiva!
 
 En cada paso de la recursión, es vital que el algoritmo progrese hacia el caso base. En el ejemplo del factorial, cada llamada recursiva reduce el valor de `n` hasta que eventualmente llega a `1`, momento en el cual la recursión termina. Si un algoritmo recursivo no se acerca al caso base, la recursión se convertirá en una **recursión infinita**, provocando un error en el programa.
 
 ### Ejemplo de ejecución: ``factorial(5)``
-# Evolución del Stack de Llamadas para Factorial de 5
-
-## Evolución del Stack de Llamadas
 
 Cuando llamamos a `factorial(5)`, el stack de llamadas evoluciona de la siguiente manera:
-
-### Representación Visual del Stack de Llamadas
-
-A medida que se realizan las llamadas recursivas, el stack se ve así:
 
 ```plaintext
 llamada inicial         caso general         caso general          caso general           caso base
@@ -61,10 +59,10 @@ llamada inicial         caso general         caso general          caso general 
 --------------        |factorial(5)|        |factorial(4)|        |factorial(3)|        |factorial(2)|    
                       --------------        |factorial(5)|        |factorial(4)|        |factorial(3)|
                                              -------------        |factorial(5)|        |factorial(4)|
-                                                                  --------------        |factorial(4)|
+                                                                  --------------        |factorial(5)|
                                                                                         --------------
 ````
-Luego, el stack se empieza a desmontar cuando se alcanza el caso base `factorial(1)`.
+Luego, el stack se empieza a desmontar (desempilar) cuando se alcanza el caso base `factorial(1)`.
 ```plain
 llamada inicial         caso general         caso general          caso general           caso base
   5! = 5 * 24           4! = 4 * 6            3! = 3 * 2            2! = 2 * 1              1! = 1 
@@ -77,20 +75,20 @@ llamada inicial         caso general         caso general          caso general 
 ```
 
 ## Eficiencia de un algoritmo recursivo
-Un algoritmo recursivo, en si mismo, no es más eficiente que uno iterativo. En efectcto, puede ser más lento por la necesidad
-de requerir utilizar el stack de llamadas de forma intensiva, incluso podría llenarse probocando un _stack overflow_.
+**Un algoritmo recursivo, en si mismo, no es más eficiente que uno iterativo**. 
+En efectcto, puede ser más lento por el intensivo uso del stack la necesidad, incluso podría llenarse si la entrada es 
+muy grande, probocando un _stack overflow_.
 
 Independientemente de la necesidad del uso del Stack, un algoritmo recursivo bien diseñado puede ser muy eficiente. Por lo tanto,
-la eficiencia del algoritmo dependerá del diseño, y no de la técnica de recursividad.
+la eficiencia del algoritmo dependerá del diseño, y no de la recursividad.
 
-Un ejemplo clásico de algoritmo recursivo que es mucho más lento que su versión iterativa es la del cálculo del i-ésimo término
+Un ejemplo clásico de algoritmo recursivo, que es mucho más lento que su versión iterativa, es la del cálculo del i-ésimo término
 de la serie de fibonacci.  El algoritmo recursivo en java es el siguiente:
 ```java
+//pre: n>=0
  public static int fib(int n) {
-        if (n == 0){
-            return 0;
-        }else if (n == 1){
-            return 1;
+        if (n <= 1){
+            return n;
         }else{
             return fib(n-1) + fib(n-2);
         }
@@ -102,6 +100,15 @@ Aquí se pueden identificar dos casos base y un caso general:
     * `si n=1, retornar 1`
 2. Caso general: 
     * `retornar fib(n-1)+fib(n-2)`
+
+Matemáticamente se puede exprasar de la siguiente manera:
+$$
+fib(n) =
+\begin{cases}
+n & \text{si } n \leq 1 \\
+fib(n-1) + fib(n-2)  & \text{si } n > 1 \\
+\end{cases}
+$$
 
 ### Análisis de la eficiencia de la Versión Recursiva
 
@@ -146,11 +153,11 @@ $$
 Implementación en java:
 ````java
 //pre: divisor es distinto de 0
-    public static int division(int dividendo, int divisor){
-        if(dividendo < divisor){
+    public static int division(int a, int b){
+        if(a < b){
             return 0;
         }else{
-            return 1+division(dividendo-divisor,divisor);
+            return 1+division(a-b,b);
         }
     }
 ````
@@ -237,6 +244,3 @@ Los resultados ordenados del más rápido al más lento son los siguientes:
 | potenciaRapida() |               1 |
 | Math.pow()       |              42 |
 | potencia()       |             115 |             
-
-
-
