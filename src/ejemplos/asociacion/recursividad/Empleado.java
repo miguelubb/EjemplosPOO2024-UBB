@@ -27,7 +27,8 @@ public class Empleado {
     }
 
     //para mantener la consistencia y eviar las referencias circulares
-    //se actúa directamente sobre los atributos y no a través de los métodos
+    //se actúa directamente
+    // sobre los atributos y no a través de los métodos
     //addSupervisado, removeSupervisado
     public void setSupervisor(Empleado supervisor) {
         //si ya estaba supervisado por alguien

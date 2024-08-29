@@ -244,3 +244,7 @@ Los resultados ordenados del más rápido al más lento son los siguientes:
 | potenciaRapida() |               1 |
 | Math.pow()       |              42 |
 | potencia()       |             115 |             
+
+
+
+#### Ejercicio: mostrar la evolución paso a paso del stack para potenciaRapida(2,128)
