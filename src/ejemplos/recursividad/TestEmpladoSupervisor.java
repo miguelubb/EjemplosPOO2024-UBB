@@ -1,4 +1,4 @@
-package ejemplos.asociacion.recursividad;
+package ejemplos.recursividad;
 
 public class TestEmpladoSupervisor {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package ejemplos.asociacion.recursividad;
+package ejemplos.recursividad;
 import java.util.*;
 public class Empleado {
     private String rut;

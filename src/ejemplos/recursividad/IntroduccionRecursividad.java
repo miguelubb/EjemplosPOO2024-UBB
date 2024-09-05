@@ -1,4 +1,4 @@
-package ejemplos.asociacion.recursividad;
+package ejemplos.recursividad;
 
 public class IntroduccionRecursividad {
     public static void main(String[] args) {

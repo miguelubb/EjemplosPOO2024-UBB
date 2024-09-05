@@ -1,4 +1,4 @@
-package ejemplos.basicos.control1;
+package evaluaciones.control1;
 
 public class CajeroAutomatico {
     public final static int MONEDA1 = 10000;
