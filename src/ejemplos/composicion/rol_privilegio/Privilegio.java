@@ -1,4 +1,4 @@
-package ejemplos.composicion;
+package ejemplos.composicion.rol_privilegio;
 
 import java.util.*;
 

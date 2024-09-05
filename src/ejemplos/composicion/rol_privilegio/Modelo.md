@@ -31,5 +31,4 @@ classDiagram
         +getRoles() List<Rol>
     }
     Rol "*" o-- "*" Privilegio
-
 ````
