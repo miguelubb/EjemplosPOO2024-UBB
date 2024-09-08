@@ -20,18 +20,23 @@ public class testRol {
             rol=new Rol(i+1, entidades[i]);
             roles.add(rol);
             for (int j = 0; j < privilegiosCRUD.length; j++) {
-                p=new Privilegio(j+1,entidades[i]+"/"+privilegiosCRUD[j]);
+                p=new Privilegio((i* entidades.length+j)+1,entidades[i]+"/"+privilegiosCRUD[j]);
                 privilegios.add(new Privilegio(j+1,privilegiosCRUD[j]));
                 rol.agregaPrivilegio(p);
             }
         }
+
         rol=new Rol(0,"ADMIN");
-        for (Privilegio privilegio : privilegios) {
-            rol.agregaPrivilegio(privilegio);
+        for(Rol r:roles){
+            for (Privilegio privilegio : r.getPrivilegios()) {
+                rol.agregaPrivilegio(privilegio);
+            }
         }
+
         roles.add(rol);
         for (Rol r : roles) {
             System.out.println(r);
         }
+
     }
 }

@@ -8,6 +8,11 @@ public class IntroduccionRecursividad {
             System.out.print(fib(i)+" ");
         }
         System.out.println();
+        for (int i = 10; i < 40; i+=10) {
+            System.out.println(i+") "+fib(i)+" ");
+
+        }
+        System.out.println();
         System.out.println("2 elevado a 10: (lento)"+potencia(2,10));
         System.out.println("2 elevado a 10 (rápido)"+potenciaRapida(2,10));
 
@@ -38,7 +43,7 @@ public class IntroduccionRecursividad {
     }
 
     //pre: n>=0
-    public static int fib(int n) {
+    public static long fib(int n) {
         if (n <= 1){
             return n;
         }else{

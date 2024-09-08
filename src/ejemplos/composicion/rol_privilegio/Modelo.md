@@ -30,5 +30,5 @@ classDiagram
         +toString() String
         +getRoles() List<Rol>
     }
-    Rol "*" o-- "*" Privilegio
+    Rol "*"o-- "*" Privilegio
 ````
