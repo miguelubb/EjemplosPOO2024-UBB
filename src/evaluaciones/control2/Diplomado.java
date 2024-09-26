@@ -22,6 +22,7 @@ public class Diplomado extends Formacion{
     public String getTipo() {
         return "Diplomado";
     }
+
     public boolean addCurso(Curso curso) {
         if(cursos.contains(curso)){
             return false;

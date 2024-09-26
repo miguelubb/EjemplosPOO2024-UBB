@@ -3,8 +3,8 @@ package evaluaciones.control2;
 import java.util.Scanner;
 
 public class Main {
-    private Scanner sc;
-    SistemaMatriculas sistema;
+    private final Scanner sc;
+    private final SistemaMatriculas sistema;
 
     public static void main(String[] args) {
         new Main().menu();
@@ -15,7 +15,9 @@ public class Main {
     public Main() {
         sc = new Scanner(System.in);
         sc.useDelimiter("\r\n|[\n\r\u2028\u2029\u0085]|\t|,");
+
         sistema=new SistemaMatriculas();
+
         sistema.creaCurso(1, "Algebra 1", 100000);
         sistema.creaCurso(2, "Algebra 2", 200000);
         sistema.creaCurso(3, "Algebra 3", 300000);
