@@ -144,19 +144,9 @@ public class InterfazDeTexto {
 
     private static void opcion6() {
         System.out.println("*** Eliminar teléfono de un contacto");
-
-
     }
     private static void opcion7() {
         System.out.println(" ***Eliminar Contacto y todos sus teléfonos");
-        System.out.println("Ingrese el nombre del contacto: ");
-        String nombre=input.next();
-        if(Controlador.getInstance().eliminarContacto(nombre)){
-            System.out.println("Contacto eliminado y todos sus teléfonos");
-        }else{
-            System.out.println("Error al eliminar el contacto");
-        }
-
 
     }
 
