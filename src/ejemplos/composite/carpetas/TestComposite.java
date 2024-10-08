@@ -17,7 +17,7 @@ public class TestComposite {
         Archivo file3=new Archivo("Hola4.java",1400);
         Archivo file4=new Archivo("Hola5.java",1500);
 
-        List<Elemento> unidad=List.of(raiz,misDoc,tareas,ejemplos,html,xml,
+        List<Elemento> unidad=List.of(raiz,misDoc,tareas,ejemplos,java,html,xml,
                 file0, file1, file2, file3, file4);
         //mover carpetas
         misDoc.moveCarpeta(raiz);
