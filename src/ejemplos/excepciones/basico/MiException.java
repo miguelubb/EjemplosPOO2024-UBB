@@ -1,4 +1,4 @@
-package ejemplos.excepciones;
+package ejemplos.excepciones.basico;
 
 public class MiException extends Exception {
     public MiException(String msg) {

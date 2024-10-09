@@ -1,4 +1,4 @@
-package ejemplos.excepciones;
+package ejemplos.excepciones.basico;
 
 import java.util.*;
 
