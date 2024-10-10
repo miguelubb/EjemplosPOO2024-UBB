@@ -2,6 +2,8 @@
 
 package ejemplos.excepciones.mvc.modelo;
 
+import ejemplos.excepciones.mvc.exception.ContactoException;
+
 import java.util.*;
 
 public class Contacto {
@@ -17,8 +19,12 @@ public class Contacto {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
+    public void setNombre(String nombre) throws ContactoException {
+        if(nombre==null || nombre.isEmpty()){
+            throw new ContactoException("El nombre no puede estar vacio ni ser un valor nulo");
+        }
         this.nombre = nombre;
+
     }
 
     public String getTelefono() {

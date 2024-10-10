@@ -1,7 +1,7 @@
 package ejemplos.excepciones.mvc.controlador;
 
-import ejemplos.excepciones.mvc.exception.ContactoRuntimeException;
-import ejemplos.mvc.contacto.modelo.Contacto;
+import ejemplos.excepciones.mvc.exception.ContactoException;
+import ejemplos.excepciones.mvc.modelo.Contacto;
 
 import java.util.ArrayList;
 
@@ -60,7 +60,7 @@ public class Controlador {
         return false;
     }
 
-    public boolean actualizarNombre(String nombreActual, String nombreNuevo){
+    public boolean actualizarNombre(String nombreActual, String nombreNuevo) throws ContactoException {
         boolean output=false;
         for (Contacto contacto : misContactos) {
             if(contacto.getNombre().equals(nombreActual)){
@@ -71,14 +71,14 @@ public class Controlador {
         return output;
     }
 
-    public boolean elimnarTelefono(String telefono) throws ContactoRuntimeException{
+    public boolean elimnarTelefono(String telefono) throws ContactoException {
         //un teléfono pertenece a un único contacto.
         for (Contacto contacto : misContactos) {
             if(contacto.getTelefono().equals(telefono)){
                 return misContactos.remove(contacto);
             }
         }
-        throw new ContactoRuntimeException("No se puede eliminar un contacto inexistente");
+        throw new ContactoException("No se puede eliminar un contacto inexistente");
     }
 
     public boolean eliminarContacto(String nombre){

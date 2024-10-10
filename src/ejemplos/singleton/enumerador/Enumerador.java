@@ -1,4 +1,4 @@
-package ejemplos.singleton;
+package ejemplos.singleton.enumerador;
 
 import java.util.*;
 

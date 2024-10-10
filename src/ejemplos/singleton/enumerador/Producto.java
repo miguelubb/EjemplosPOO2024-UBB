@@ -1,4 +1,4 @@
-package ejemplos.singleton;
+package ejemplos.singleton.enumerador;
 
 public class Producto {
     //debe ser estatico para que se comparta el nombre de la serie entre las instancias de la clase

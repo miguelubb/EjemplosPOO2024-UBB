@@ -1,7 +1,7 @@
 package ejemplos.excepciones.mvc.vista;
 
 import ejemplos.excepciones.mvc.controlador.Controlador;
-import ejemplos.excepciones.mvc.exception.ContactoRuntimeException;
+import ejemplos.excepciones.mvc.exception.ContactoException;
 
 
 import java.util.Arrays;
@@ -135,12 +135,15 @@ public class InterfazDeTexto {
         String nombre=input.next();
         System.out.println("Nombre nuevo: ");
         String nuevo=input.next();
-        if(Controlador.getInstance().actualizarNombre(nombre, nuevo)){
-            System.out.println("Nombre del contacto cambiado exitosamente");
-        }else{
-            System.out.println("Falló el cambio de nombre");
+        try {
+            if (Controlador.getInstance().actualizarNombre(nombre, nuevo)) {
+                System.out.println("Nombre del contacto cambiado exitosamente");
+            } else {
+                System.out.println("Falló el cambio de nombre");
+            }
+        }catch (ContactoException e){
+            System.out.println("Error al actualizar el nombre");
         }
-
     }
 
     private static void opcion6() {
@@ -151,7 +154,7 @@ public class InterfazDeTexto {
         String numero=input.next();
         try {
             Controlador.getInstance().elimnarTelefono(numero);
-        } catch (ContactoRuntimeException e) {
+        } catch (ContactoException e) {
             System.out.println("*** Error:"+ e.getMessage());
         }
         //System.out.println(" ***Eliminar Contacto y todos sus teléfonos");
