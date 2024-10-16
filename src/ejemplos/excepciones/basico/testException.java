@@ -22,7 +22,7 @@ public class testException {
         }
 
         System.out.println(resp.orElse("No existe el dia"));
-
+        resp.ifPresent(System.out::println);
 
         Optional<Integer> n=leerNumero();
         while(n.isEmpty()) {
