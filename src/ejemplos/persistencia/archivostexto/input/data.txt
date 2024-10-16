@@ -1,0 +1,100 @@
+ 1 ; Miguel Romero; 123, 345
+ 2 ; Ana López; 234, 456
+ 3 ; Juan Pérez; 345, 567, 890
+ 4 ; Luis Fernández; 456, 678, 901
+ 5 ; María García; 567, 789, 123
+ 6 ; Carlos Sánchez; 678, 890, 234
+ 7 ; Laura Díaz; 789, 901, 345
+ 8 ; José Hernández; 890, 123, 456
+ 9 ; Elena Castillo; 901, 234, 567
+10 ; Roberto Ruiz; 123, 345, 678
+11; Carmen Torres; 234, 456, 789
+12; Pedro Jiménez; 345, 567, 890
+13; Sofía Moreno; 456, 678, 901
+14; Andrés Vega; 567, 789, 123
+15; Paula Herrera; 678, 890, 234
+16; Antonio Gómez; 789, 901, 345
+17; Claudia Ríos; 890, 123, 456
+18; Diego Ortiz; 901, 234, 567
+19; Isabel Navarro; 123, 345, 678
+20; Javier Silva; 234, 456, 789
+21; Marta Reyes; 345, 567, 890
+22; Sergio Castro; 456, 678, 901
+23; Valeria Peña; 567, 789, 123
+24; Fernando Márquez; 678, 890, 234
+25; Alicia Vázquez; 789, 901, 345
+26; Pablo Soto; 890, 123, 456
+27; Julia Flores; 901, 234, 567
+28; Adrián Molina; 123, 345, 678
+29; Teresa Ramos; 234, 456, 789
+30; Ignacio León; 345, 567, 890
+31; Raquel Aguilar; 456, 678, 901
+32; Manuel Cruz; 567, 789, 123
+33; Rosa Salinas; 678, 890, 234
+34; Daniel Núñez; 789, 901, 345
+35; Patricia Ibáñez; 890, 123, 456
+36; Marcos Guzmán; 901, 234, 567
+37; Lorena Cordero; 123, 345, 678
+38; Vicente Escobar; 234, 456, 789
+39; Gabriela Romero; 345, 567, 890
+40; Óscar Delgado; 456, 678, 901
+41; Natalia Benítez; 567, 789, 123
+42; Víctor Campos; 678, 890, 234
+43; Daniela Serrano; 789, 901, 345
+44; Hugo Méndez; 890, 123, 456
+45; Beatriz Paredes; 901, 234, 567
+46; Alberto Aranda; 123, 345, 678
+47; Mónica Espinosa; 234, 456, 789
+48; Gonzalo Correa; 345, 567, 890
+49; Irene Montes; 456, 678, 901
+50; Rafael Tapia; 567, 789, 123
+51; Angela Rivera; 678, 890, 234
+52; Cristian Roldán; 789, 901, 345
+53; Leticia Vidal; 890, 123, 456
+54; Julián Gutiérrez; 901, 234, 567
+55; Marina Ponce; 123, 345, 678
+56; Salvador Arroyo; 234, 456, 789
+57; Amelia Quintana; 345, 567, 890
+58; Fabián Espinoza; 456, 678, 901
+59; Regina Blanco; 567, 789, 123
+60; Enrique Villar; 678, 890, 234
+61; Natalia Rubio; 789, 901, 345
+62; Mauricio Lozano; 890, 123, 456
+63; Eva Carmona; 901, 234, 567
+64; Armando Romero; 123, 345, 678
+65; Susana Beltrán; 234, 456, 789
+66; Gonzalo Arias; 345, 567, 890
+67; Helena Lara; 456, 678, 901
+68; Andrés Pineda; 567, 789, 123
+69; Karla Ferrer; 678, 890, 234
+70; Emilio Álvarez; 789, 901, 345
+71; Andrea Sánchez; 890, 123, 456
+72; Julián Santana; 901, 234, 567
+73; Carolina Esquivel; 123, 345, 678
+74; Eduardo Olivares; 234, 456, 789
+75; Sara Rivas; 345, 567, 890
+76; Joel Villalobos; 456, 678, 901
+77; Elvira Sosa; 567, 789, 123
+78; Ricardo Palma; 678, 890, 234
+79; Ángela Ortiz; 789, 901, 345
+80; Mateo Márquez; 890, 123, 456
+81; Verónica Soto; 901, 234, 567
+82; César Peralta; 123, 345, 678
+83; Silvia Muñoz; 234, 456, 789
+84; Martín Calderón; 345, 567, 890
+85; Raúl Lozano; 456, 678, 901
+86; Lourdes Gálvez; 567, 789, 123
+87; Marcelo Domínguez; 678, 890, 234
+88; Pilar Estrada; 789, 901, 345
+89; Juan Carlos Romero; 890, 123, 456
+90; Ágata Sepúlveda; 901, 234, 567
+91; Tomás Guerra; 123, 345, 678
+92; Aitana Cortés; 234, 456, 789
+93; Samuel Castañeda; 345, 567, 890
+94; Berta Alcántara; 456, 678, 901
+95; Francisco Lozano; 567, 789, 123
+96; Clara Figueroa; 678, 890, 234
+97; Nicolás Pardo; 789, 901, 345
+98; Elsa Medina; 890, 123, 456
+99; Ramón Acosta; 901, 234, 567
+100; Florencia Salazar; 123, 345, 678
