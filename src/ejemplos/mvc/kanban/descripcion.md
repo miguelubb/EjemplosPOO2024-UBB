@@ -69,11 +69,12 @@ A continuación, se muestra un ejemplo de cómo se espera que funcione la aplica
 
 ```plaintext
 --- Menú Principal ---
-1. Crear nueva tarea
-2. Ver tareas
-3. Mover tarea entre listas
-4. Marcar tarea como completada
-5. Salir
+1) Agregar Lista
+2) Agregar tarea a lista
+3) Mover tarea
+4) Mostrar listas
+5) Mostrar tareas
+6) Salir
 
 Seleccione una opción:
 ```
@@ -99,15 +100,18 @@ classDiagram
         - String nombre
         - String descripcion
     }
-    
-    class Controlador {
-        + static Controlador instancia
-        + getInstance() Controlador
-        + crearTarea(nombre: String, descripcion: String, responsable: String, plazo: LocalDateTime)
-        + moverTarea(idTarea: int, nombreListaDestino: String)
-        + mostrarListas()
-        + marcarTareaCompletada(idTarea: int)
-    }
+
+   class Controlador {
+      -static Controlador instance
+      +static Controlador getInstance()
+      -Controlador()
+      +boolean agregarLista(int id, String nombre, String descripcion)
+      +boolean eliminarLista(int id)
+      +ListaDeTareas buscarLista(int id)
+      +boolean agregarTarea(int idLista, Tarea tarea)
+      +boolean eliminarTarea(int idLista, int idTarea)
+      +Tarea buscarTarea(int idLista, int idTarea)
+   }
     
     class Vista {
         + mostrarMenu()

@@ -1,6 +1,7 @@
 package ejemplos.mvc.kanban.modelo;
 
 import java.time.LocalDateTime;
+import java.util.*;
 
 public class Tarea {
     int id;
@@ -20,7 +21,9 @@ public class Tarea {
         creacion = LocalDateTime.now();
         termino = null;
     }
-
+    public int getId(){
+        return id;
+    }
     public String getNombre() {
         return nombre;
     }
@@ -62,5 +65,17 @@ public class Tarea {
     }
     public void terminar(){
         termino = LocalDateTime.now();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Tarea tarea)) return false;
+        return id == tarea.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(id);
     }
 }

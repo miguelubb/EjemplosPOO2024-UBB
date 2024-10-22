@@ -76,7 +76,7 @@ public class BuscadorAvaluoFiscal {
             String linea;
             String[] data;
 
-            for (int i = 0; i < 11 && sc.hasNext(); i++) {
+            for (int i = 0; i < 5 && sc.hasNext(); i++) {
                 linea = sc.nextLine();
                 data = linea.split(";");
                 for (int j = 0; j < data.length; j++) {
