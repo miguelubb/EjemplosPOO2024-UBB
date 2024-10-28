@@ -27,6 +27,7 @@ public class Menu {
     }
     public void dislay() {
         int op=1;
+        //leer datos con el controlador...
         do{
             System.out.println("\nMenu");
             System.out.println("1) Agregar Lista");
@@ -46,6 +47,8 @@ public class Menu {
                 case 6 -> System.out.println("Adios...");
             }
         }while(op!=6);
+        //guardar daos....
+
     }
 
     private void mostrarTareas() {
