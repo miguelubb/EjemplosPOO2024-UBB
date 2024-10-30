@@ -1,19 +1,18 @@
-package ejemplos.mvc.kanban.vista;
+package ejemplos.mvcconpresistencia.kanban.vista;
 
-import ejemplos.mvc.kanban.controlador.Controlador;
-import ejemplos.mvc.kanban.excepciones.KanbanException;
+import ejemplos.mvcconpresistencia.kanban.controlador.Controlador;
+import ejemplos.mvcconpresistencia.kanban.excepciones.KanbanException;
 
-import javax.naming.ldap.Control;
 import java.time.LocalDateTime;
 import java.util.*;
-import java.time.*;
+
 public class Menu {
     Scanner sc=new Scanner(System.in);
     public static void main(String[] args) {
         new Menu().dislay();
     }
     public Menu(){
-        init();
+        //init();
     }
     public void init(){
         Controlador.getInstance().agregarLista(1, "Todo", "Tareas por hacer");
@@ -27,6 +26,8 @@ public class Menu {
     }
     public void dislay() {
         int op=1;
+        //leer datos con el controlador...
+        Controlador.getInstance().leer();
         do{
             System.out.println("\nMenu");
             System.out.println("1) Agregar Lista");
@@ -46,12 +47,15 @@ public class Menu {
                 case 6 -> System.out.println("Adios...");
             }
         }while(op!=6);
+        //guardar daos....
+        Controlador.getInstance().guardar();
+
     }
 
     private void mostrarTareas() {
         System.out.println("...::::: Mostrar TAREAS ::::....");
         System.out.println("Listas de tareas: ");
-        String[] listas=Controlador.getInstance().getListas();
+        String[] listas= Controlador.getInstance().getListas();
         for (String lista : listas) {
             System.out.print(lista+" ");
         }
@@ -68,7 +72,7 @@ public class Menu {
     private void mostrarListas() {
         System.out.println("...::::: Mostrar Listas de tareas ::::....");
         System.out.println("Listas de tareas");
-        String[] listas=Controlador.getInstance().getListas();
+        String[] listas= Controlador.getInstance().getListas();
         for (String lista : listas) {
             System.out.println(lista);
         }
@@ -78,7 +82,7 @@ public class Menu {
         System.out.println("...::::: Mover TAREA ::::....");
 
         System.out.println("Listas de tareas: ");
-        String[] listas=Controlador.getInstance().getListas();
+        String[] listas= Controlador.getInstance().getListas();
         for (String lista : listas) {
             System.out.print(lista+" ");
         }

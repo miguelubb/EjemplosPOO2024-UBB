@@ -3,7 +3,7 @@ package ejemplos.persistencia.serializacion;
 import java.io.*;
 import java.util.*;
 
-public class Serializacion {
+public class SerializacionDeMuchosObjetosGuardandoUnaLista {
     public static void main(String[] args) {
         List<Persona> personas = new ArrayList<Persona>();
         personas.add(new Persona("Jose", "930124567"));
