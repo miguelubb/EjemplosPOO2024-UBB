@@ -120,6 +120,32 @@ public class Main {
                     menorSueldoPorDepartamento.get(depto).isPresent() ? menorSueldoPorDepartamento.get(depto).get().getSueldo() : 0,
                     mayorSueldoPorDepartamento.get(depto).isPresent() ? mayorSueldoPorDepartamento.get(depto).get().getSueldo() : 0
             ));
+
+            //Ejercicios:
+                //1) listar empleados cuyo nombre comienza con S
+            System.out.println("\nLista de empleados cuyo nombre comienza con S");
+            empleados
+                    .stream()
+                    .filter(x->x.getNombre().toUpperCase().charAt(0)=='S')
+                    .forEach(x-> System.out.println(x.getNombre()));
+
+                //2) listar empleados con sueldo en un rango de valores dado
+            System.out.println("\nLista de empleados con sueldo entre 600 y 1000");
+            empleados.stream()
+                       .filter(x->x.getSueldo()>=600000)
+                       .filter(x->x.getSueldo()<=1000000)
+                       .forEach(x-> System.out.printf("%-20s $%,10d %n",x.getNombre(),x.getSueldo()));
+
+                //3) Indicar el nombre del deptartamento al que pertenece: "Jessica Jimenez"
+            Optional<Empleado> resp=empleados
+                    .stream()
+                    .filter(x->x.getNombre().equalsIgnoreCase("Miguel"))
+                    .findFirst();
+            if(resp.isPresent()) {
+                System.out.println("Departamento de Jessica es: "+ resp.get().getDepartamento() );
+            }else{
+                System.out.println("No trabaja en la empresa");
+            }
         } catch (FileNotFoundException e) {
             System.out.println("No se encuentra el archivo: 'empleados.txt'");
         }

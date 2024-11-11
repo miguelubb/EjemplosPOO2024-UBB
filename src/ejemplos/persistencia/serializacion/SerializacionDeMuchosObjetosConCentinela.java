@@ -55,6 +55,7 @@ public class SerializacionDeMuchosObjetosConCentinela {
             FileOutputStream output = new FileOutputStream(out, false);
             oos = new ObjectOutputStream(output);
             for (Persona persona : personas) {
+
                 oos.writeObject(persona);
             }
             //Al terminar se inserta el valor centinela, que puede ser un null o un objeto especial que marque fin de archivo
