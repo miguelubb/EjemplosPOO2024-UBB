@@ -1,0 +1,10 @@
+SKU001,Premio Liofilizado Pollo,5000,120,20
+SKU002,Premio Liofilizado Salmón,5500,100,15
+SKU003,Premio Liofilizado Cordero,6000,80,10
+SKU004,Snack Dental,4500,50,5
+SKU005,Juguete de Cuerda,3000,70,10
+SKU006,Cama para Perro Grande,25000,20,3
+SKU007,Shampoo Hipoalergénico,8000,40,5
+SKU008,Collar Reflectante,3500,60,10
+SKU009,Arnés Ajustable,7000,30,5
+SKU010,Pelota de Goma,2000,90,15

@@ -1,8 +1,10 @@
-package ejemplos.mvcconpresistencia.ventas.modelo;
+package ejemplos.mvcconpresistencia.inventario.modelo;
 
+import java.io.Serializable;
 import java.util.*;
 
-public class Producto {
+public class Producto implements Serializable {
+    static final long serialVersionUID = 1L;
     private String sku;
     private String nombre;
     private long precio;

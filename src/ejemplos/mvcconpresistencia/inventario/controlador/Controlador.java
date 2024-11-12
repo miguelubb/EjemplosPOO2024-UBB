@@ -1,7 +1,8 @@
-package ejemplos.mvcconpresistencia.ventas.controlador;
+package ejemplos.mvcconpresistencia.inventario.controlador;
 
-import ejemplos.mvcconpresistencia.ventas.excepciones.VentasException;
-import ejemplos.mvcconpresistencia.ventas.modelo.Producto;
+import ejemplos.mvcconpresistencia.inventario.excepciones.InventarioException;
+import ejemplos.mvcconpresistencia.inventario.modelo.Producto;
+import ejemplos.mvcconpresistencia.inventario.persistencia.IOProducto;
 
 import java.util.*;
 
@@ -10,6 +11,7 @@ public class Controlador {
     private static Controlador instance = new Controlador();
 
     private Controlador() {
+        fileName = "src/ejemplos/mvcconpresistencia/inventario/persistencia/inventario.data";
         productos = new ArrayList<>();
     }
 
@@ -19,9 +21,18 @@ public class Controlador {
 
     //--------------
     private List<Producto> productos;
+    private String fileName;
 
     public String[][] productos() {
-        return productos.toArray(new String[0][]);
+        return productos.stream()
+                .map(p -> new String[]{
+                        p.getSku(),
+                        p.getNombre(),
+                        String.format("%,d",p.getPrecio()),
+                        String.format("%,d",p.getStock()),
+                        String.format("%,d",p.getStockMin())
+                })
+                .toArray(String[][]::new);
     }
 
     public String[][] productosBajoStock() {
@@ -30,9 +41,9 @@ public class Controlador {
                 .map(p -> new String[]{
                         p.getSku(),
                         p.getNombre(),
-                        "" + p.getPrecio(),
-                        "" + p.getStock(),
-                        "" + p.getStockMin()
+                        String.format("%,d",p.getPrecio()),
+                        String.format("%,d",p.getStock()),
+                        String.format("%,d",p.getStockMin())
                 })
                 .toArray(String[][]::new);
     }
@@ -49,13 +60,13 @@ public class Controlador {
         }
     }
 
-    public boolean disminuirStock(String sku, long dism) throws VentasException {
+    public boolean disminuirStock(String sku, long dism) throws InventarioException {
         Optional<Producto> opProd = findProduct(sku);
         if (opProd.isPresent()) {
             Producto p = opProd.get();
             //se aumenta el stock
             if (p.getStock() <= dism) {
-                throw new VentasException("No hay stock suficiente");
+                throw new InventarioException("No hay stock suficiente");
             }
             p.setStock(p.getStock() - dism);
             return true;
@@ -69,7 +80,7 @@ public class Controlador {
                                 String nombre,
                                 long precio,
                                 long stock,
-                                long stockMin) throws VentasException {
+                                long stockMin) throws InventarioException {
 
         Optional<Producto> prod = findProduct(sku);
         if (prod.isPresent()) {
@@ -94,4 +105,19 @@ public class Controlador {
                 .findFirst();
     }
 
+    public void exportar(String filename) throws InventarioException {
+        IOProducto.getInstance().exportar(productos, filename);
+    }
+
+    public void importar(String filename) throws InventarioException {
+        productos = IOProducto.getInstance().importar(filename);
+    }
+
+    public void cargarDatos() throws InventarioException {
+        productos = IOProducto.getInstance().load(fileName);
+    }
+
+    public void guardarDatos() throws InventarioException {
+        IOProducto.getInstance().save(productos, fileName);
+    }
 }
