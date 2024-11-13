@@ -119,6 +119,7 @@ public class ControlSelloDisco {
                 for (Cancion c : canciones) {
                     out[i++] = c.toString();
                 }
+                return out;
             } else {
                 throw new SelloDiscoException("El album no tiene canciones");
             }

@@ -15,6 +15,7 @@ public class Cancion {
         this.duracion = duracion;
         this.genero = genero;
         this.nombreInterprete = nombreInterprete;
+        albunes=new ArrayList<>();
     }
 
     public String getNombre() {

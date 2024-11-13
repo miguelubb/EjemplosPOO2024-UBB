@@ -13,6 +13,7 @@ public class Album {
     public Album(String nombre, LocalDate fechaCreacion) {
         this.nombre = nombre;
         this.fechaCreacion = fechaCreacion;
+        canciones = new ArrayList<>();
     }
 
     public String getNombre() {
