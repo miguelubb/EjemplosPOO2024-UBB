@@ -15,11 +15,13 @@ public class CalculaEdad extends JDialog {
     private JLabel lbErrorFecha;
     private JPanel panel1;
     private JLabel lbTorta;
+    private MidiPlayer player;
 
     public CalculaEdad() {
         setContentPane(contentPane);
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);
+        player = new MidiPlayer("src/ejemplos/gui/edad/canciones/cumple.mid");
 
         buttonCancel.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -99,8 +101,11 @@ public class CalculaEdad extends JDialog {
             lbOutput.setVisible(true);
             if (p.getDays() == 0 && p.getMonths() == 0 && p.getYears() > 0) {
                 lbTorta.setVisible(true);
+                //BirthdaySong.play(); //canción sencilla "hecha a mano"
+                player.play(); //reproducción de archivo midi Karaoke
             } else {
                 lbTorta.setVisible(false);
+                player.stop();
             }
         } catch (RuntimeException e) {
             JOptionPane.showMessageDialog(this, "La fecha ingresada no es válida", "Error", JOptionPane.ERROR_MESSAGE);
