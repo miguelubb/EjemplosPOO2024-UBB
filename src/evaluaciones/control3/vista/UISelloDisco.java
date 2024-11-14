@@ -46,10 +46,10 @@ public class UISelloDisco {
             String[] cancionesAlbum = ControlSelloDisco.getInstance().listaCancionesDeAlbum(album);
             System.out.println();
             System.out.println("LISTADO DE CANCIONES DEL ALBUM "+album.toUpperCase());
-            System.out.printf("%20s %15s %15s %15s %n", "Nombre", "Duración", "Genero", "Interprete");
+            System.out.printf("%-50s %15s %-15s %-15s %n", "Nombre", "Duración", "Genero", "Interprete");
             for (String cancion : cancionesAlbum) {
                 String[] data = cancion.split(";");
-                System.out.printf("%20s %15s %15s %15s %n", data[0], data[1], data[2], data[3]);
+                System.out.printf("%-50s %15s %-15s %-15s %n", data[0], data[1], data[2], data[3]);
             }
             System.out.println();
         } catch (SelloDiscoException e) {
@@ -65,10 +65,10 @@ public class UISelloDisco {
             String[] cancionesGenero = ControlSelloDisco.getInstance().listaCancionesDeGenero(genero);
             System.out.println();
             System.out.println("LISTADO DE CANCIONES DEL GÉNERO "+genero.toUpperCase());
-            System.out.printf("%20s %15s %15s %15s %n", "Nombre", "Duración", "Intérprete", "N° de Álbumes");
+            System.out.printf("%-50s %15s %-15s %15s %n", "Nombre", "Duración", "Intérprete", "N° de Álbumes");
             for (String cancion : cancionesGenero) {
                 String[] data = cancion.split(";");
-                System.out.printf("%20s %15s %15s %15s %n", data[0], data[1], data[2], data[3]);
+                System.out.printf("%-50s %15s %-15s %15s %n", data[0], data[1], data[3], data[4]);
             }
             System.out.println();
         } catch (SelloDiscoException e) {
@@ -80,10 +80,10 @@ public class UISelloDisco {
         String[] albumes = ControlSelloDisco.getInstance().listaAlbunes();
         System.out.println();
         System.out.println("LISTADO DE ALBUMES");
-        System.out.printf("%20s %15s %15s %15s %n", "Nombre", "Fecha creacion", "Duracion", "N° de Canciones");
+        System.out.printf("%-50s %-15s %15s %15s %n", "Nombre", "Fecha creacion", "Duracion", "N° de Canciones");
         for (String album : albumes) {
             String[] data = album.split(";");
-            System.out.printf("%20s %15s %15s %15s %n", data[0], data[1], data[2], data[3]);
+            System.out.printf("%-50s %-15s %15s %15s %n", data[0], data[1], data[2], data[3]);
         }
         System.out.println();
 
