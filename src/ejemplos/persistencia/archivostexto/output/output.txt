@@ -1,0 +1,8 @@
+0; Juan
+1; Ana
+2; Lorena
+3; Fernando
+4; Alonso
+5; Gabriel
+6; Diego
+7; Pamela

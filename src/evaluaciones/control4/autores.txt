@@ -1,0 +1,10 @@
+1;Claude Monet;Francia;1840-11-14;Legión de Honor, Premio de Arte Francé;
+2;Vincent van Gogh;Países Bajos;1853-03-30;ninguno
+3;Pablo Picasso;España;1881-10-25;Legión de Honor, Premio Lenin de la Pa;
+4;Salvador Dalí;España;1904-05-11;Gran Cruz de Isabel la Católic;
+5;Frida Kahlo;México;1907-07-06;ninguno
+6;Rembrandt;Países Bajos;1606-07-15;Reconocimiento póstum;
+7;Leonardo da Vinci;Italia;1452-04-15;Genio universa;
+8;Diego Velázquez;España;1599-06-06;Reconocimiento por la corte español;
+9;Johannes Vermeer;Países Bajos;1632-10-31;ninguno
+10;Paul Cézanne;Francia;1839-01-19;Reconocimiento póstum;

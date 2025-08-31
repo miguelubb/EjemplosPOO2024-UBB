@@ -1,0 +1,106 @@
+1
+¡Viva la vida!
+1-11-2003
+1
+El amor es así
+2-11-2004
+1
+Nada es imposible para ti
+3-11-2005
+1
+Es tiempo de esperanza
+4-11-2006
+1
+No pares se soñar
+5-11-2007
+1
+Vuelve a nacer
+6-11-2008
+1
+Ya se acaba el baile
+7-11-2009
+2
+Cantando soy feliz
+1,2
+POP
+Alexis Ace
+2
+Susurros del Viento
+4,7
+NEW_AGE
+Luis Fonsi
+2
+Recuerdos del Mar
+1,0
+ROCK
+Andrés Calamaro
+2
+Amanecer Dorado
+2,2
+NEW_AGE
+Ana Gabriel
+2
+Bajo la Luna
+2,8
+POP
+Natalia Lafourcade
+2
+Noche Estrellada
+4,7
+ROCK
+Natalia Lafourcade
+2
+Lluvia de Verano
+1,6
+ROCK
+Natalia Lafourcade
+2
+Estrellas Fugaces
+2,6
+ROCK
+Alexis Ace
+2
+Caminos Lejanos
+3,5
+POP
+Carlos Vives
+2
+Lluvia de Verano
+4,8
+ROCK
+Luis Fonsi
+2
+Recuerdos del Mar
+3,6
+POP
+Ana Gabriel
+6
+POP
+3
+Recuerdos del Mar
+¡Viva la vida!
+3
+Noche Estrellada
+El amor es así
+3
+Lluvia de Verano
+Nada es imposible para ti
+3
+Estrellas Fugaces
+¡Viva la vida!
+3
+Susurros del Viento
+El amor es así
+3
+Amanecer Dorado
+Nada es imposible para ti
+3
+Caminos Lejanos
+¡Viva la vida!
+3
+Bajo la Luna
+El amor es así
+3
+Cantando soy feliz
+Nada es imposible para ti
+10
